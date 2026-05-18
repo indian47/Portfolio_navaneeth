@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Navaneeth Puklath — Software engineering and cybersecurity portfolio. Data risk, privacy, and secure systems." />
+  <title>Navaneeth Puklath | Software Engineering & Cybersecurity</title>
+  <!-- Apply saved theme before CSS paints to avoid flash -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("portfolio-theme") === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+  <!-- Headings: Space Grotesk · Body: Inter · Tags: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient background layers (styled in CSS) -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#hero" data-smooth-scroll>Navaneeth<span class="logo__dot">.</span> Puklath</a>
+      <nav class="nav nav--desktop" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about" data-smooth-scroll>About</a></li>
+          <li><a href="#education" data-smooth-scroll>Education</a></li>
+          <li><a href="#experience" data-smooth-scroll>Experience</a></li>
+          <li><a href="#projects" data-smooth-scroll>Projects</a></li>
+          <li><a href="#skills" data-smooth-scroll>Skills</a></li>
+          <li><a href="#certifications" data-smooth-scroll>Certifications</a></li>
+          <li><a href="#awards" data-smooth-scroll>Awards</a></li>
+          <li><a href="#contact" data-smooth-scroll>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <!-- Dark / light appearance; label updates in script.js -->
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to light mode"
+          title="Toggle color theme"
+        >
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a class="btn btn--ghost btn--sm" href="images/resume.pdf" download>Resume</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile navigation panel -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <nav aria-label="Mobile primary">
+        <ul class="mobile-nav__list">
+          <li><a href="#about" data-smooth-scroll>About</a></li>
+          <li><a href="#education" data-smooth-scroll>Education</a></li>
+          <li><a href="#experience" data-smooth-scroll>Experience</a></li>
+          <li><a href="#projects" data-smooth-scroll>Projects</a></li>
+          <li><a href="#skills" data-smooth-scroll>Skills</a></li>
+          <li><a href="#certifications" data-smooth-scroll>Certifications</a></li>
+          <li><a href="#awards" data-smooth-scroll>Awards</a></li>
+          <li><a href="#contact" data-smooth-scroll>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero section" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Software engineering · Cybersecurity · Data privacy</p>
+          <h1 class="hero__title">
+            <span class="hero__name">Navaneeth Puklath</span>
+            <span class="hero__role">Building secure, compliant systems at scale</span>
+          </h1>
+          <p class="hero__lead">
+            Master’s student in Software Engineering at San José State University, with a foundation in computer science and cybersecurity.
+            I work at the intersection of data risk, privacy engineering, and security automation from governance workflows to intelligent tooling.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="https://github.com/Navaneethvinodp" target="_blank" rel="noopener noreferrer">View GitHub</a>
+            <a class="btn btn--secondary" href="#contact" data-smooth-scroll>Contact me</a>
+            <a class="btn btn--ghost" href="images/resume.pdf" download>Download resume</a>
+          </div>
+          <div class="hero__links">
+            <a class="icon-link" href="https://www.linkedin.com/in/navaneeth-p-nair" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a class="icon-link" href="https://github.com/Navaneethvinodp" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a class="icon-link" href="mailto:nivinvinod1236@gmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual hero__visual--stack reveal reveal--delay">
+          <!-- Professional headshot: images/photo.png -->
+          <figure class="hero-photo">
+            <img
+              class="hero-photo__img"
+              src="images/photo.png"
+              alt="Navaneeth P — professional portrait"
+              width="640"
+              height="800"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
+          <div class="hero-card hero-card--compact">
+            <div class="hero-card__scan" aria-hidden="true"></div>
+            <div class="hero-card__content">
+              <span class="mono mono--muted">status</span>
+              <span class="mono mono--accent">secure · compliant · shipping</span>
+              <div class="hero-card__metrics">
+                <div><span class="metric__value">MS</span><span class="metric__label">Software Eng.</span></div>
+                <div><span class="metric__value">PwC</span><span class="metric__label">Data Risk &amp; Privacy</span></div>
+                <div><span class="metric__value">FACT</span><span class="metric__label">President</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section section--tight" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">About me</h2>
+          <p class="section__subtitle">Disciplined execution across security, privacy, and engineering.</p>
+        </header>
+        <div class="about__grid">
+          <figure class="about-photo reveal">
+            <img
+              class="about-photo__img"
+              src="images/photo.png"
+              alt=""
+              width="400"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="visually-hidden">Navaneeth Puklath</figcaption>
+          </figure>
+          <div class="prose prose--wide reveal">
+            <p>
+              I am a software engineer focused on <strong>cybersecurity</strong>, <strong>data privacy</strong>, and <strong>trustworthy automation</strong>.
+              At PwC, I design SQL-driven compliance and governance controls, build analytics workflows in Alteryx and Python, and help organizations align with regulations such as CCPA while improving operational efficiency through Azure-based automation and generative AI tooling.
+            </p>
+            <p>
+              Previously, I served as <strong>President of FACT</strong> (Forensics Analysis Club and Triage) at Amrita Vishwa Vidyapeetham, Chennai—leading training programs that materially improved forensic proficiency and case outcomes for members.
+              My internship at <strong>NullClass</strong> deepened my hands-on experience in web application security, penetration testing, and reporting aligned with OWASP and ASVS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Education</h2>
+          <p class="section__subtitle">Academic foundation in software engineering and cybersecurity.</p>
+        </header>
+        <ul class="timeline reveal">
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="card card--pad">
+              <div class="card__top">
+                <h3 class="card__title">San José State University</h3>
+                <span class="pill">In progress</span>
+              </div>
+              <p class="card__meta">August 2026 — Present · San José, CA</p>
+              <p class="card__text"><strong>Master of Science, Software Engineering</strong></p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="card card--pad">
+              <div class="card__top">
+                <h3 class="card__title">Amrita Vishwa Vidyapeetham</h3>
+                <span class="pill pill--muted">Completed</span>
+              </div>
+              <p class="card__meta">October 2021 — May 2025 · Chennai, India</p>
+              <p class="card__text"><strong>Bachelor of Technology, Computer Science with Cyber Security</strong></p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="card card--pad">
+              <div class="card__top">
+                <h3 class="card__title">Bharatiya Vidya Bhavan’s Vidya Mandir, Poochatty</h3>
+              </div>
+              <p class="card__meta">July 2019 — May 2021 · Kerala, India</p>
+              <p class="card__text"><strong>Senior Secondary — Computer Science</strong></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Experience -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">Privacy engineering, security automation, and student leadership.</p>
+        </header>
+        <div class="cards-stack">
+          <article class="card card--exp reveal">
+            <div class="card__top">
+              <div>
+                <h3 class="card__title">Associate — Data Risk &amp; Privacy</h3>
+                <p class="card__org">PricewaterhouseCoopers (PwC)</p>
+              </div>
+              <span class="pill">Feb 2025 — Present</span>
+            </div>
+            <ul class="list">
+              <li>Designed and implemented SQL-based compliance and governance rules supporting initiatives such as compliance rule creation, brand and recall controls, anti-counterfeit monitoring, rules translation, and circumvention detection.</li>
+              <li>Built data governance and analytics workflows using Alteryx, SQL, and Python to analyze regulated movement of personally identifiable information (PII), detect unauthorized outbound transfers, and strengthen enterprise privacy posture.</li>
+              <li>Supported data mapping and compliance programs aligned with CCPA and international privacy requirements.</li>
+              <li>Developed an end-to-end AI-assisted ticket resolution path for ServiceNow using large language models, retrieval-augmented generation (RAG), and Azure services—reducing manual effort for recurring ticket categories.</li>
+              <li>Delivered a Python automation tool for digital asset tracking that improved accuracy and reduced manual reconciliation.</li>
+              <li>Prototyped low-code automations with Microsoft Power Automate and Copilot Studio alongside generative AI capabilities.</li>
+            </ul>
+          </article>
+          <article class="card card--exp reveal">
+            <div class="card__top">
+              <div>
+                <h3 class="card__title">President — FACT</h3>
+                <p class="card__org">Forensics Analysis Club and Triage, ASE Chennai</p>
+              </div>
+              <span class="pill pill--muted">Oct 2023 — Nov 2024</span>
+            </div>
+            <ul class="list">
+              <li>Led a flagship training initiative that improved forensic analysis proficiency by approximately 60% and helped members increase case resolution rates by roughly 40% through structured resources and mentorship.</li>
+            </ul>
+          </article>
+          <article class="card card--exp reveal">
+            <div class="card__top">
+              <div>
+                <h3 class="card__title">Security Intern</h3>
+                <p class="card__org">NullClass</p>
+              </div>
+              <span class="pill pill--muted">May 2024 — Aug 2024</span>
+            </div>
+            <ul class="list">
+              <li>Focused on cybersecurity, secure web development, and penetration testing; executed vulnerability assessments using OWASP Top 10:2021 methodologies.</li>
+              <li>Validated web application controls against ASVS 4.0.3 and produced clear, actionable reports to reduce exploitable risk.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Featured Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Featured projects</h2>
+          <p class="section__subtitle">Security engineering, ML for threat detection, and full-stack systems.</p>
+        </header>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <!-- Decorative control-style icon: cyan → violet on hover / focus -->
+            <button type="button" class="project-card__icon" aria-label="PE-Defender — malware detection highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">PE-Defender</h3>
+              <span class="project-card__period">Sep 2024 — May 2025</span>
+            </div>
+            <p class="project-card__desc">Machine learning malware detection for Windows PE files using neural networks—strong generalization on large corpora with emphasis on zero-day–style samples.</p>
+            <ul class="list list--compact">
+              <li>Achieved 96.2% accuracy and 0.991 AUC on 50,000+ PE files, with improved detection on challenging zero-day–like threats versus a commercial antivirus baseline in the study set.</li>
+              <li>Engineered features from PE headers and API imports to improve efficiency and reduce detection latency versus dynamic sandboxing approaches.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Cybersecurity</span><span class="tag">Digital forensics</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="NetGuard — phishing detection highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">NetGuard</h3>
+              <span class="project-card__period">Aug 2024 — Sep 2024</span>
+            </div>
+            <p class="project-card__desc">Phishing detection and predictive security analytics combining URL intelligence, user-facing protections, and network-derived signals.</p>
+            <ul class="list list--compact">
+              <li>Shipped an AI-assisted phishing analysis workflow with URL mutation awareness, browser extension alerts, and MFA-oriented hardening patterns.</li>
+              <li>Integrated NetFlow-oriented analytics to forecast risky traffic patterns and support safer browsing decisions.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Security analytics</span><span class="tag">HTML/CSS</span><span class="tag">Networking</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="Windows malware detection — PE / ML highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" rx="0.5" />
+                <path d="M9 2v2M15 2v2M9 20v2M15 20v2M22 9h-2M22 15h-2M2 9h2M2 15h2" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Windows malware detection (PE / ML)</h3>
+              <span class="project-card__period">Aug 2024 — Sep 2024</span>
+            </div>
+            <p class="project-card__desc">Hybrid static analysis for PE malware classification using header-derived features, byte n-grams, and opcode n-grams.</p>
+            <ul class="list list--compact">
+              <li>Improved Windows endpoint resilience by predicting malicious PE samples efficiently under academic supervision (Dr. Dija, CDAC).</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Static analysis</span><span class="tag">ML</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="Network packet analyser highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Network packet analyser</h3>
+              <span class="project-card__period">Jun 2023 — Jul 2024</span>
+            </div>
+            <p class="project-card__desc">Python toolkit for capture, parsing, metadata extraction, and ML-assisted threat detection on TCP traffic.</p>
+            <ul class="list list--compact">
+              <li>Applied recurrent models to materially improve threat-detection accuracy on captured sessions.</li>
+              <li>Defined algorithms and visualization flows for I/O analysis, streamlining delivery timelines for the tool suite.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Wireshark</span><span class="tag">TCP/IP</span><span class="tag">ML</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="AVASTA — Android security testing highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="7" y="2" width="10" height="20" rx="2" />
+                <path d="M12 18h.01" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">AVASTA</h3>
+              <span class="project-card__period">Jul 2023 — Nov 2023</span>
+            </div>
+            <p class="project-card__desc">Android vulnerability assessment and security testing aid—automating repeatable checks and tightening SDLC security feedback loops.</p>
+            <ul class="list list--compact">
+              <li>Delivered Python-driven assessments that reduced observed threat exposure and improved trust in release candidates.</li>
+              <li>Collaborated across teams to refine application security policies and procedures.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Mobile security</span><span class="tag">OWASP</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="IrisGuard — biometrics highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">IrisGuard</h3>
+              <span class="project-card__period">Jan 2023 — May 2023</span>
+            </div>
+            <p class="project-card__desc">Iris recognition pipeline in MATLAB focused on accuracy, latency, and robust error handling for biometric verification.</p>
+            <ul class="list list--compact">
+              <li>Achieved 93.4% recognition accuracy with sub-second processing and strong false-positive control in evaluated scenarios.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">MATLAB</span><span class="tag">Biometrics</span><span class="tag">Signal processing</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="Tellie — spam mitigation highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="m22 6-10 7L2 6" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Tellie</h3>
+              <span class="project-card__period">Jan 2023 — May 2023</span>
+            </div>
+            <p class="project-card__desc">Spam mitigation using a Naive Bayes classifier to improve communication quality and platform safety.</p>
+            <ul class="list list--compact">
+              <li>Reached ~95% accuracy while filtering a high share of unwanted messages in the evaluated dataset.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Classification</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="project-card__icon" aria-label="Voyage — travel platform highlights">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 19 21 12 17 5 21 12 2" />
+              </svg>
+            </button>
+            <div class="project-card__head">
+              <h3 class="project-card__title">Voyage</h3>
+              <span class="project-card__period">Aug 2022 — Dec 2022</span>
+            </div>
+            <p class="project-card__desc">Travel management system with personalized itineraries, bookings, and a responsive Flask + MySQL backend.</p>
+            <ul class="list list--compact">
+              <li>Integrated MySQL with Flask, added session management, and improved responsiveness for common user flows.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Flask</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span><span class="tag">Python</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">Tools and domains I use to ship secure, measurable outcomes.</p>
+        </header>
+        <div class="skill-groups reveal">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Engineering &amp; data</h3>
+            <div class="tags tags--lg">
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Alteryx</span>
+              <span class="tag">C++</span><span class="tag">HTML/CSS</span><span class="tag">Excel (advanced)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Cloud &amp; automation</h3>
+            <div class="tags tags--lg">
+              <span class="tag">Microsoft Azure</span><span class="tag">Power Automate</span><span class="tag">Copilot Studio</span>
+              <span class="tag">ServiceNow workflows</span><span class="tag">RAG / LLM integration</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Security &amp; privacy</h3>
+            <div class="tags tags--lg">
+              <span class="tag">Cybersecurity</span><span class="tag">Data privacy</span><span class="tag">OWASP</span><span class="tag">Burp Suite</span>
+              <span class="tag">Wireshark</span><span class="tag">nmap</span><span class="tag">WebInspect</span>
+              <span class="tag">Penetration testing</span><span class="tag">Risk assessments</span><span class="tag">Physical security</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Forensics &amp; leadership</h3>
+            <div class="tags tags--lg">
+              <span class="tag">Digital forensics</span><span class="tag">Physical forensics</span><span class="tag">OneTrust</span>
+              <span class="tag">ISC2 knowledge areas</span><span class="tag">Team management</span><span class="tag">Organizational leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Certifications -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Certifications</h2>
+          <p class="section__subtitle">Privacy operations, forensics foundations, and security fundamentals.</p>
+        </header>
+        <ul class="cert-grid reveal">
+          <li class="cert-card"><span class="cert-card__issuer">OneTrust</span><span class="cert-card__name">Privacy Badge (mapping automation, incident management, DSR automation, assessment automation, inventory management)</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">EC-Council</span><span class="cert-card__name">Digital Forensics Essentials (DFE)</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">Coursera</span><span class="cert-card__name">Crash Course on Python</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">ISC2</span><span class="cert-card__name">Incident Response, Business Continuity, and Disaster Recovery</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">EC-Council</span><span class="cert-card__name">Network Defense Essentials (NDE)</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">Coursera</span><span class="cert-card__name">IBM — Emotional intelligence for human interactions</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">EC-Council</span><span class="cert-card__name">Ethical Hacking Essentials</span></li>
+          <li class="cert-card"><span class="cert-card__issuer">freeCodeCamp</span><span class="cert-card__name">Scientific Computing with Python</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. Awards -->
+    <section class="section section--alt" id="awards">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Awards</h2>
+          <p class="section__subtitle">Recognition for forensic rigor and public-safety innovation.</p>
+        </header>
+        <div class="awards reveal">
+          <blockquote class="award">
+            <p>Led a four-person finalist team in the Forensic Investigation Challenge at Tantrotsav ’23, a national technical festival.</p>
+          </blockquote>
+          <blockquote class="award">
+            <p>Selected as a finalist in the Tamil Nadu Police Hackathon 2023 for a fake number plate detection concept—demonstrating leadership in law-enforcement technology.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">I am open to thoughtful collaborations in software engineering, privacy, and security.</p>
+        </header>
+        <div class="contact-panel reveal">
+          <div class="contact-panel__primary">
+            <a class="contact-tile" href="mailto:nivinvinod1236@gmail.com">
+              <span class="contact-tile__label">Email</span>
+              <span class="contact-tile__value">nivinvinod1236@gmail.com</span>
+            </a>
+            <a class="contact-tile" href="tel:+917907066160">
+              <span class="contact-tile__label">Phone</span>
+              <span class="contact-tile__value">+91 79070 66160</span>
+            </a>
+            <p class="contact-note">Location: San José, CA</p>
+          </div>
+          <div class="contact-panel__actions">
+            <a class="btn btn--primary btn--block" href="https://github.com/Navaneethvinodp" target="_blank" rel="noopener noreferrer">View GitHub</a>
+            <a class="btn btn--secondary btn--block" href="https://www.linkedin.com/in/navaneeth-p-nair" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            <a class="btn btn--ghost btn--block" href="images/resume.pdf" download>Download resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year"></span> Navaneeth Puklath · Static portfolio</p>
+      <a class="footer__top" href="#hero" data-smooth-scroll>Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
